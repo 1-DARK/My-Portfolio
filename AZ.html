@@ -1,0 +1,1674 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <style>
+    /* Small devices (phones, less than 600px) */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    /* Medium devices (tablets, 600px to 1024px) */
+    @media (min-width: 600px) and (max-width: 1024px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* Large devices (desktops, 1024px and above) */
+    @media (min-width: 1024px) {
+      body {
+        font-size: 18px;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #0b1e2f;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .section1 {
+      background: linear-gradient(to top, #071f35, #a7bfe6);
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: #0b1e2f;
+      border-radius: 10px;
+    }
+
+    .section2 {
+      background-color: #a7bfe6;
+      border-radius: 20px;
+      box-sizing: border-box;
+      box-shadow: black;
+      margin: 10px;
+      align-items: center;
+    }
+
+    .div1 {
+      background-color: rgba(245, 245, 245, 0.8);
+
+      border-radius: 60px;
+      padding: 10px;
+      width: 100%;
+      justify-content: right;
+      box-sizing: border-box;
+      left: 0;
+      right: 0;
+      align-self: center;
+      margin: 0px;
+    }
+
+    .section2 h2 {
+      padding: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(6, 51, 36);
+    }
+
+    .section2 p {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .section3 {
+      padding: 50px 0;
+      background: linear-gradient(to bottom, #071f35, #a7bfe6);
+      color: white;
+      text-align: center;
+      border-radius: 30px;
+    }
+
+    .section3 p {
+      color: white;
+    }
+
+    .section3 h3 {
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .experience-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .experience-container h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .circle-path {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .skill {
+      position: absolute;
+      background-color: #071f35;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .services1 {
+      border-radius: 70px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10px;
+      padding: 10px;
+      gap: 10;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      max-width: 350px;
+      margin: 10px;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 40px;
+      box-shadow: black;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+      justify-content: space-between;
+    }
+
+    .services:hover {
+      transition: color 0.3s ease;
+      transform: scale(1.1);
+    }
+
+    .services img {
+      width: 300px;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: black;
+      transform: scale(1.1);
+      align-self: center;
+      margin: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+      object-fit: cover;
+    }
+
+    .services figcaption {
+      text-align: center;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      padding: 30px 2%;
+      margin-left: 10;
+      margin-top: 10;
+      box-sizing: border-box;
+      z-index: 10000;
+      position: sticky;
+      top: 50px;
+      /* This will make it stick at 50px from the top when scrolling */
+      left: 50%;
+      border-radius: 10px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 10%;
+      color: #ffffff;
+      background-color: #0b1e2f;
+      border-radius: 600px;
+      /* Reduce or remove if needed */
+      z-index: 1000;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+    .green-dot {
+      width: 10px;
+      height: 10px;
+      background-color: rgb(7, 247, 7);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3ddc97;
+    }
+
+    header .logo2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3ddc97;
+      align-items: center;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #c9d1d9;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      align-items: center;
+    }
+
+    header nav a:hover {
+      color: #3ddc97;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: calc(100vh - 80px);
+      padding: 0 10%;
+      position: relative;
+      color: #ffffff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      z-index: 1;
+    }
+
+    .hero .content,
+    .hero .image-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero .content {
+      max-width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-weight: bold;
+      color: #3ddc97;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #d1d5db;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #09f08c;
+      color: 0b1e2f;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #205e43;
+    }
+
+    .whatsapp-button i {
+      margin-right: 8px;
+      font-size: 24px;
+    }
+
+    .hero .badge {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #3ddc97;
+      color: #0d1117;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .work {
+      background-color: transparent;
+      color: #0d1117;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .top-button_text-flex {
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      flex: none;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .menu-link {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid #4b5563;
+      /* Tailwind Gray 600 */
+      border-radius: 9999px;
+      /* Fully rounded corners */
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .menu-link:hover {
+      color: #9ca3af;
+      /* Tailwind Gray 400 */
+      background-color: rgba(255, 255, 255, 0.1);
+      /* Subtle background effect */
+    }
+
+    ul {
+      list-style-type: none;
+      /* Remove default list styling */
+      padding: 0;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0b1e2f;
+      border-radius: 20px;
+      align-items: center;
+      padding: 20px 5%;
+      justify-content: center;
+      color: white;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 20px;
+      padding: 10px;
+      gap: 90px;
+      justify-content: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #ul {
+      margin: 20px;
+      justify-content: left;
+      text-align: left;
+    }
+
+    .footer-left {
+      align-items: left;
+      margin: 20px;
+      text-align: left;
+    }
+
+    .services {
+      align-items: left;
+      margin: 20px;
+      text-align: left;
+    }
+
+    .footer-center p {
+      margin: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      width: 200px;
+    }
+
+    .footer-right {
+      margin: 20px;
+    }
+
+    .social-icons {
+      margin: 20px;
+      size: 50px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #1da1f2;
+      /* Change color on hover (you can adjust for each platform) */
+      transform: scale(1.2);
+    }
+
+    .social-icons a:nth-child(1) {
+      color: #0077b5;
+    }
+
+    /* LinkedIn */
+    .social-icons a:nth-child(2) {
+      color: #333;
+    }
+
+    /* GitHub */
+    .social-icons a:nth-child(3) {
+      color: #1da1f2;
+    }
+
+    /* Twitter */
+    .social-icons a:nth-child(4) {
+      color: #e1306c;
+    }
+
+    /* Instagram */
+
+    #copy {
+      font-size: 15px;
+    }
+    #dynamicText {
+      font-size: 30px;
+    }
+    @media (max-width: 558px) {
+      #dynamicText {
+        font-size: 20px;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: #ffffff;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <a id="a" href="AZ.html">HOME</a>
+        <a id="a" href="about.html">ABOUT</a>
+        <a id="a" href="project.html">PROJECTS</a>
+
+        <a href="https://wa.me/918882966791" target="_blank">
+          <span class="green-dot"></span> Available for work</a
+        >
+      </nav>
+    </header>
+    <section
+      class="section1 floating"
+      style="
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        animation: 3s ease-in-out 0s infinite normal none running
+          floatContinuous;
+      "
+    >
+      <div
+        class="nav floating"
+        style="
+          opacity: 1;
+          transform: translateY(0px);
+          transition: opacity 1s ease-out, transform 1s ease-out;
+          animation: 3s ease-in-out 0s infinite normal none running
+            floatContinuous;
+        "
+      >
+        <section
+          class="hero floating"
+          style="
+            opacity: 1;
+            transform: translateY(0px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            animation: 3s ease-in-out 0s infinite normal none running
+              floatContinuous;
+          "
+        >
+          <div
+            class="content floating"
+            style="
+              opacity: 1;
+              transform: translateY(0px);
+              transition: opacity 1s ease-out, transform 1s ease-out;
+              animation: 3s ease-in-out 0s infinite normal none running
+                floatContinuous;
+            "
+          >
+            <h1
+              class="floating"
+              style="
+                opacity: 1;
+                transform: translateY(0px);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+                animation: 3s ease-in-out 0s infinite normal none running
+                  floatContinuous;
+              "
+            >
+              <span
+                class="floating"
+                style="
+                  margin-top: 100px;
+                  opacity: 1;
+                  transform: translateY(0px);
+                  transition: opacity 1s ease-out, transform 1s ease-out;
+                  animation: 3s ease-in-out 0s infinite normal none running
+                    floatContinuous;
+                "
+                >Frontend Developer</span
+              >
+              Passionate about creating impactful Websites and Designing
+            </h1>
+            <p
+              id="dynamicText"
+              class="typing floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+                animation: auto ease 0s 1 normal none running none;
+              "
+            ></p>
+
+            <a
+              href="https://wa.me/918882966791"
+              target="_blank"
+              class="floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+              ><button
+                class="whatsapp-button floating"
+                style="
+                  opacity: 0;
+                  transform: translateY(50px);
+                  animation: auto ease 0s 1 normal none running none;
+                  transition: opacity 1s ease-out, transform 1s ease-out;
+                "
+              >
+                <i
+                  class="fab fa-whatsapp floating"
+                  style="
+                    opacity: 0;
+                    transform: translateY(50px);
+                    animation: auto ease 0s 1 normal none running none;
+                    transition: opacity 1s ease-out, transform 1s ease-out;
+                  "
+                ></i>
+                WhatsApp
+              </button></a
+            >
+          </div>
+        </section>
+      </div>
+    </section>
+    <br
+      class="floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    /><br
+      class="floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    /><br
+      class="floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    /><br
+      class="floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    />
+    <section
+      class="section2 floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    >
+      <br
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      />
+
+      <div
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      >
+        <h2
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          Services
+        </h2>
+        <p
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          Explore the range of services I offer, each crafted with precision and
+          creativity to bring your vision to life. From seamless functionality
+          to striking aesthetics, my solutions are designed to elevate your
+          brand and deliver lasting impact.
+        </p>
+      </div>
+      <div
+        class="services1 floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      >
+        <div
+          class="services floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <img
+            src="WEB.jfif"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+          <figcaption
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            Web Design
+          </figcaption>
+          <p
+            id="web"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            I provide professional web design services tailored to create
+            visually stunning, user-friendly, and responsive websites. My
+            designs focus on aesthetics, functionality, and seamless user
+            experience, ensuring that your website not only looks great but also
+            performs efficiently. Whether you need a business website,
+            portfolio, e-commerce store, or a custom solution, I use the latest
+            design trends and technologies to bring your vision to life. Let’s
+            build a website that enhances your brand and engages your audience
+            effectively!
+          </p>
+          <a
+            href="about.html"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: rgb(61, 220, 151);
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              margin-right: 10px;
+              align-self: center;
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+            class="floating"
+          >
+            learn more </a
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+        </div>
+        <div
+          class="services floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <img
+            src="UI.jfif"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+          <figcaption
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            UI/UX Design
+          </figcaption>
+          <p
+            id="web"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            I provide professional UI/UX design services tailored to create
+            visually stunning, user-friendly, and responsive designs. My
+            designs focus on aesthetics, functionality, and seamless user
+            experience, ensuring that your website not only looks great but also
+            performs efficiently. Whether you need a business website,
+            portfolio, e-commerce store, or a custom solution, I use the latest
+            design trends and technologies to bring your vision to life. Let’s build a strategy that connects with your audience
+            and drives measurable success!
+          </p>
+          <a
+            href="about.html"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: rgb(61, 220, 151);
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              margin-right: 10px;
+              align-self: center;
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+            class="floating"
+          >
+            learn more </a
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+        </div>
+        <div
+          class="services floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <img
+            src="RES.jfif"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+      
+          <figcaption
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            Responsive Design
+          </figcaption>
+          <p
+            id="web"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+          Fully responsive designs that adapt to any screen size.
+
+          Improved user experience and engagement.
+          
+          Faster load times and optimized performance.
+          
+          SEO-friendly designs to boost your search rankings.
+          Proven expertise in modern web design standards.
+
+Attention to detail and pixel-perfect designs.
+Timely delivery and clear communication.
+
+
+          Custom solutions tailored to your brand and goals. Let’s work
+            together to enhance your online presence and grow your business
+            through effective SEO strategies.
+          </p>
+          <a
+            href="about.html"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: rgb(61, 220, 151);
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              margin-right: 10px;
+              align-self: center;
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+            class="floating"
+          >
+            learn more </a
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      class="section3 floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    >
+      <br
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      />
+      <div
+        class="div2 floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      >
+        <h3
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          Skills || Expertise
+        </h3>
+        <p
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          Discover my core skills in Frontend Development, Responsive Design and
+          UI/UX Design.
+        </p>
+      </div>
+
+      <div
+        class="experience-container floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      >
+        <h1
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          1.5 YEARS OF EXPERIENCE IN Frontend Development
+        </h1>
+        <svg
+          class="circle-path floating"
+          viewBox="0 0 400 400"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <circle
+            cx="200"
+            cy="200"
+            r="150"
+            stroke="white"
+            stroke-width="1"
+            fill="none"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          ></circle>
+        </svg>
+        <div
+          id="skills-container"
+          class="floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <div class="skill" style="transform: translate(311.193px, 107.279px)">
+            Frontend
+          </div>
+          <div class="skill" style="transform: translate(252.721px, 311.193px)">
+            Web Development
+          </div>
+          <div class="skill" style="transform: translate(48.807px, 252.721px)">
+            Digital Marketing
+          </div>
+          <div class="skill" style="transform: translate(107.279px, 48.807px)">
+            UI/UX Design
+          </div>
+        </div>
+      </div>
+      <a
+        href="about.html"
+        target="_blank"
+        style="
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: rgb(61, 220, 151);
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-right: 10px;
+          align-self: center;
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+        class="floating"
+      >
+        learn more </a
+      ><br
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      /><br
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      />
+    </section>
+
+    <footer
+      class="floating"
+      style="
+        opacity: 0;
+        transform: translateY(50px);
+        animation: auto ease 0s 1 normal none running none;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      "
+    >
+      <div
+        class="footer-content floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        "
+      >
+        <div
+          class="footer-left floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <h3
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            Quick links
+          </h3>
+          <a
+            href="home.html"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            <ul
+              id="ul"
+              class="floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            >
+              Home
+            </ul></a
+          >
+          <a
+            href="about.html"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+            ><ul
+              id="ul"
+              class="floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            >
+              About me
+            </ul></a
+          >
+          <a
+            href="project.html"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+            ><ul
+              id="ul"
+              class="floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            >
+              Projects
+            </ul></a
+          >
+        </div>
+
+        <div
+          class="social-cons floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          "
+        >
+          <h3
+            class="footer-right floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            Follow me
+          </h3>
+          <a
+            href="https://www.linkedin.com/in/chauhan26102006"
+            target="_blank"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            <i
+              class="fab fa-linkedin floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            ></i> </a
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+          <a
+            href="https://github.com/1-DARK"
+            target="_blank"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            <i
+              class="fab fa-github floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            ></i> </a
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+          <a
+            href="https://x.com/HarshChauh74463"
+            target="_blank"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            <i
+              class="fab fa-x-twitter floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            ></i>
+          </a>
+          <br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          />
+          <a
+            href="https://www.instagram.com/MargaretDigitalCreations"
+            target="_blank"
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+              transition: opacity 1s ease-out, transform 1s ease-out;
+            "
+          >
+            <i
+              class="fab fa-instagram floating"
+              style="
+                opacity: 0;
+                transform: translateY(50px);
+                animation: auto ease 0s 1 normal none running none;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+              "
+            ></i>
+          </a>
+        </div>
+        <div
+          class="footer-right floating"
+          style="
+            opacity: 0;
+            transform: translateY(50px);
+            animation: auto ease 0s 1 normal none running none;
+          "
+        >
+          <h3
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+            "
+          >
+            Contact
+          </h3>
+          <br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+            "
+          />
+          <email
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+            "
+            >harshitchauhan292929@gmail.com</email
+          ><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+            "
+          /><br
+            class="floating"
+            style="
+              opacity: 0;
+              transform: translateY(50px);
+              animation: auto ease 0s 1 normal none running none;
+            "
+          />
+        </div>
+      </div>
+      <p
+        id="copy"
+        class="floating"
+        style="
+          opacity: 0;
+          transform: translateY(50px);
+          animation: auto ease 0s 1 normal none running none;
+        "
+      >
+        ©2025 || All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      function toggleAnswer(id) {
+        const answer = document.getElementById(`answer-${id}`);
+        const question = answer.previousElementSibling;
+        answer.classList.toggle("active");
+        question.classList.toggle("active");
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.querySelector("button");
+        const image = document.querySelector(".image-container img");
+        const availableLink = document.querySelector('a[href="#"]');
+
+        // Button hover effect to change image
+        button.addEventListener("mouseover", () => {
+          image.src = "images/m.png"; // Replace with the new image path
+        });
+
+        button.addEventListener("mouseout", () => {
+          image.src = "images/y.png"; // Revert to the original image path
+        });
+      });
+      //the code below is the code that is being used in the website for auto typing effect
+      document.addEventListener("DOMContentLoaded", () => {
+        const dynamicText = document.getElementById("dynamicText");
+
+        // Calculate age
+        const birthDate = new Date("2003-11-09");
+        const today = new Date();
+        const age =
+          today.getFullYear() -
+          birthDate.getFullYear() -
+          (today.getMonth() < birthDate.getMonth() ||
+          (today.getMonth() === birthDate.getMonth() &&
+            today.getDate() < birthDate.getDate())
+            ? 1
+            : 0);
+
+        // Updated phrases with age and final message
+        const phrases = [
+          "My Name is Harsh Vardhan Chauhan.",
+          "I am experienced in Frontend Development.",
+          "I work with SQL, MySQL, and Python.",
+          "React and JavaScript are my go-to tools.",
+          "If you'd like to learn more about me and my work, visit my About page.",
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let typingActive = false;
+
+        function typePhrase() {
+          if (!typingActive) return;
+          if (charIndex < phrases[phraseIndex].length) {
+            dynamicText.textContent += phrases[phraseIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typePhrase, 50); // Adjust typing speed
+          } else {
+            setTimeout(() => {
+              if (phraseIndex < phrases.length - 1) {
+                deletePhrase();
+              } else {
+                phraseIndex = 0;
+                charIndex = 0;
+                typePhrase(); // Restart from the first phrase
+              }
+            }, 1500); // Pause before deleting
+          }
+        }
+
+        function deletePhrase() {
+          if (!typingActive) return;
+          if (charIndex > 0) {
+            dynamicText.textContent = phrases[phraseIndex].substring(
+              0,
+              charIndex - 1
+            );
+            charIndex--;
+            setTimeout(deletePhrase, 50); // Adjust deleting speed
+          } else {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(typePhrase, 500); // Pause before typing next phrase
+          }
+        }
+
+        document.addEventListener("mousemove", () => {
+          if (!typingActive) {
+            typingActive = true;
+            typePhrase();
+          }
+        });
+      });
+
+      const skills = [
+        { name: "Web Design", link: "about.html" },
+        { name: "Web Development", link: "project.html" },
+        { name: "Responsive Design", link: "about.html" },
+        { name: "UI/UX Design", link: "project.html" },
+      ];
+
+      const container = document.getElementById("skills-container");
+      let angle = 0;
+      const radius = 150;
+
+      function updateSkillsPosition() {
+        container.innerHTML = "";
+        skills.forEach((skill, index) => {
+          const skillAngle =
+            (angle + index * (360 / skills.length)) * (Math.PI / 180);
+          const x = Math.cos(skillAngle) * radius;
+          const y = Math.sin(skillAngle) * radius;
+
+          const skillElement = document.createElement("div");
+          skillElement.className = "skill";
+          skillElement.textContent = skill.name;
+          skillElement.style.transform = `translate(${x + 180}px, ${
+            y + 180
+          }px)`;
+
+          skillElement.onclick = () => {
+            window.location.href = skill.link;
+          };
+
+          container.appendChild(skillElement);
+        });
+      }
+
+      setInterval(() => {
+        angle += 1;
+        updateSkillsPosition();
+      }, 50);
+
+      updateSkillsPosition();
+      //here
+      window.onload = function () {
+        const elements = document.querySelectorAll(
+          "body *:not(header):not(header *)"
+        ); // Excludes <nav> and its children
+
+        // Apply floating effect when page loads
+        elements.forEach((element) => {
+          element.classList.add("floating");
+        });
+
+        // Function to check if an element is in the viewport
+        function isInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return rect.top < window.innerHeight - 50 && rect.bottom > 50;
+        }
+
+        // Function to apply the floating animation
+        function applyScrollEffect() {
+          elements.forEach((element) => {
+            if (isInViewport(element)) {
+              element.style.opacity = "1";
+              element.style.transform = "translateY(0px)";
+              element.style.transition =
+                "opacity 1s ease-out, transform 1s ease-out";
+
+              // Continuous floating effect
+              element.style.animation =
+                "floatContinuous 3s infinite ease-in-out";
+            } else {
+              element.style.opacity = "0";
+              element.style.transform = "translateY(50px)";
+              element.style.animation = "none"; // Stop animation when out of view
+            }
+          });
+        }
+
+        // Apply effect on scroll
+        window.addEventListener("scroll", applyScrollEffect);
+
+        // Run once to check already visible elements
+        applyScrollEffect();
+      };
+
+      function toggleAnswer(id) {
+        const answer = document.getElementById(`answer-${id}`);
+        const question = answer.previousElementSibling;
+        answer.classList.toggle("active");
+        question.classList.toggle("active");
+      }
+
+      //fqa answers
+      function toggleAnswer(id) {
+        let answer = document.getElementById("answer-" + id);
+
+        // Instantly toggle visibility without delay
+        if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block"; // Show the answer instantly
+        } else {
+          answer.style.display = "none"; // Hide the answer instantly
+        }
+      }
+    </script>
+  </body>
+</html>

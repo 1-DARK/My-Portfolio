@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="work.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+        body {
+            margin: 10px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to top, #071f35, #a7bfe6);
+            color: white;
+           }
+      
+.nav {
+
+    padding: 30px 2%;
+    margin-left: 10;
+    
+    box-sizing: border-box;
+    z-index: 10000;
+    position: sticky;
+    top: 5px;
+    /* This will make it stick at 50px from the top when scrolling */
+    left: 50%;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: #ffffff;
+    background-color: #0b1e2f;
+    border-radius: 600px;
+    /* Reduce or remove if needed */
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(7, 247, 7);
+    border-radius: 50%;
+    display: inline-block;
+}
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3ddc97;
+}
+
+header .logo2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3ddc97;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #c9d1d9;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    align-items: center;
+}
+
+
+
+header nav a:hover {
+    color: #3ddc97;
+}
+        h1{
+            text-transform:uppercase;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        #p{
+margin-bottom: 20px;
+
+        }
+
+        .projects {
+            background: linear-gradient(to top, #071f35, #a7bfe6);
+            padding:20px 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: black;
+            margin: 10px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+        }
+.project:hover{
+    transform: scale(1.1);
+}
+        .projects-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .project-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .project {
+            width: 23%;
+            margin-bottom: 20px;
+            background-color: #0b1e2f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .project h2 {
+            color: #3ddc97;
+            margin-bottom: 10px;
+            font-size: .8rem;
+        }
+
+        .project p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            color: #d1d5db;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: #3ddc97;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project a:hover {
+            color: #2ab377;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                }
+.project img:hover{
+    transform: scale(1.1);
+}
+footer{
+    text-align: center;
+    background-color: #0b1e2f;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px 5%;
+    justify-content: center;
+    color:white;
+  
+}
+   .footer-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    gap: 90px;
+    justify-content: center;
+    
+    
+   }  
+   footer a{
+    text-decoration: none;
+    color: white;
+   }
+
+   #ul{
+    margin: 20px;
+    justify-content: left;
+    text-align: left;
+   }
+   .footer-left{
+    align-items: left;
+    margin: 20px;
+    text-align: left;
+   }
+   .services{
+    align-items: left;
+    margin: 20px;
+    text-align: left;
+    
+   }
+   .footer-center p{
+    
+    margin: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 200px;
+   
+   }
+   .footer-right{
+    margin: 20px;
+   }
+   .social-icons{
+    margin: 20px;
+    size: 50px;
+
+   }
+   .social-icons a{
+display: inline-block;
+margin: 0 10px;
+font-size: 24px;
+text-decoration: none;
+   }
+   .social-icons a:hover {
+    color: #1DA1F2; /* Change color on hover (you can adjust for each platform) */
+    transform: scale(1.2);
+}
+.social-icons a:nth-child(1) { color: #0077B5; } /* LinkedIn */
+.social-icons a:nth-child(2) { color: #333; } /* GitHub */
+.social-icons a:nth-child(3) { color: #1DA1F2; } /* Twitter */
+.social-icons a:nth-child(4) { color: #E1306C; } /* Instagram */
+
+  #copy{
+    font-size: 15px;
+  }
+</style>
+<body>
+    <div class="nav">
+        <header>
+          
+            <nav>
+                <a href="AZ.html">HOME</a>
+                <a href="about.html">ABOUT ME</a>
+                
+             
+                <a href="https://wa.me/918882966791" target="_blank"> <span class="green-dot"></span>   Available for work</a>
+     
+            </nav>
+        </header>
+    </div>
+    <br><br><br>
+
+    <section class="projects">
+        <div class="projects-container">
+            <h1>My Projects</h1>
+<p id="p">Over the course of my career, I’ve had the privilege of designing and deploying a variety of projects that reflect both my technical skills and creative approach. Each project represents a blend of innovation, precision, and problem-solving, allowing me to create impactful solutions tailored to specific needs. Below, you'll find a selection of the projects I’ve brought to life, each one a testament
+     to my ability to turn ideas into fully realized, 
+     functional designs.</p>
+            <div class="project-row">
+                <div class="project">
+                    <img src="PORT.png" alt="Portfolio Mockup">
+                    <h2>Client Portfolio Website</h2>
+                    <p>A visually appealing and responsive portfolio website showcasing my skills and projects.</p>
+                    <a href="https://github.com/1-DARK/S_WEBD">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="Tour.png" alt="Tour and Travel Website">
+                    <h2>Tour and Travel Website</h2>
+                    <p>The best travel guides on India travel & tourism to explore the best of Incredible India tours along with affordable India tour packages</p>
+                    <a href="https://github.com/1-DARK/Tourism-and-Travel">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="Quiz.png" alt="Blog Application Mockup">
+                    <h2>Quiz Website For Testline</h2>
+                    <p>A clean and modern Quiz Website For Testline where users can test their knowledge and skills.</p>
+                    <a href="https://github.com/1-DARK/testline">View Project</a>
+                </div>
+              
+            </div>
+
+            <div class="project-row">
+                <div class="project">
+                    <img src="SHY.png" alt="Photo Gallery Website">
+                    <h2>Photo Gallery Website</h2>
+                    <p>A clean and modern Photo Gallery Website where users can view and share photos.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="T.png" alt="real Estate Mockup">
+                    <h2>My Portfolio Website</h2>
+                    <p>A clean and modern Portfolio Website where users can view my projects and know more about me.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="images/e.png" alt="e-commerce">
+                    <h2>E-commerce</h2>
+                    <p>An advanced eCommerce platform with enhanced features for seamless shopping and secure transactions.</p>
+                    <a href="#">View Project</a>
+                </div>
+        </div>
+    </section>  
+    <footer>
+        <div class="footer-content">
+            <div class="links">
+                <h3>Quick links</h3>
+               <a href="home.html"> <ul id="ul">Home</ul></a>
+                <a href="about.html"><ul id="ul">About me</ul></a>
+                <a href="project.html"><ul id="ul">Projects</ul></a>
+               
+ 
+               
+                    </div>
+           
+            <div class="Services">
+                <h3>Services</h3>
+              <a href="AZ.html">  <ul id="ul">Web Design</ul></a>
+              <a href="AZ.html">  <ul id="ul">UI/UX Design</ul></a>
+              <a href="AZ.html">  <ul id="ul">Responsive Design</ul></a>
+             
+            </div>
+            <div class="Services">
+                <h3>Languages</h3>
+                <a href="project.html"> <ul id="ul">HTML</ul></a>
+                <a href="project.html"> <ul id="ul">CSS</ul></a>
+                <a href="project.html"> <ul id="ul">TAILWINDCSS</ul></a>
+                <a href="project.html"> <ul id="ul">JAVASCRIPT</ul></a>
+                <a href="project.html"> <ul id="ul">PYTHON</ul></a>
+                <a href="project.html"> <ul id="ul">SQL</ul></a>
+                <a href="project.html"> <ul id="ul">REACT</ul></a>
+                <a href="project.html"> <ul id="ul">MYSQL</ul></a>
+            </div>
+            
+            <div class="social-cons">
+                <h3 class="footer-right">Follow me </h3>
+                <a href="https://www.linkedin.com/in/chauhan26102006" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    </a><br><br>
+                    <a href="https://github.com/1-DARK" target="_blank">
+                        <i class="fab fa-github"></i>
+                        </a><br><br>
+                        <a href="https://x.com/HarshChauh74463" target="_blank">
+                            <i class="fab fa-x-twitter"></i>
+                            </a> <br><br>
+                            <a href="https://www.instagram.com/MargaretDigitalCreations" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>     
+            </div>
+            <div class="footer-right">
+                <h3>Contact</h3> <br>
+                <email >harshitchauhan292929@gmail.com</email><br><br>
+              
+            </div>
+        
+        </div>
+        <p id="copy">&copy;2025 ||  All rights reserved.</p>
+    </footer>
+    <script>
+        
+window.onload = function () {
+    const elements = document.querySelectorAll("body *:not(header):not(header *)"); // Excludes <nav> and its children
+
+    // Apply floating effect when page loads
+    elements.forEach(element => {
+        element.classList.add("floating");
+    });
+
+    // Function to check if an element is in the viewport
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 50 && rect.bottom > 50; 
+    }
+
+    // Function to apply the floating animation
+    function applyScrollEffect() {
+        elements.forEach(element => {
+            if (isInViewport(element)) {
+                element.style.opacity = "1";
+                element.style.transform = "translateY(0px)";
+                element.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+
+                // Continuous floating effect
+                element.style.animation = "floatContinuous 3s infinite ease-in-out";
+            } else {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(50px)";
+                element.style.animation = "none"; // Stop animation when out of view
+            }
+        });
+    }
+
+    // Apply effect on scroll
+    window.addEventListener("scroll", applyScrollEffect);
+
+    // Run once to check already visible elements
+    applyScrollEffect();
+};
+    </script>
+</body>
+</html>

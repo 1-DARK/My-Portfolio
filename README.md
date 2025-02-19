@@ -67,7 +67,7 @@ This repository contains the code for a personal portfolio website designed to s
 
 ## Preview
 
- **Website Preview**:(https://1-dark.github.io/My-Portfolio/)
+ **Website Preview**: https://1-dark.github.io/My-Portfolio/
 
 ---
 
